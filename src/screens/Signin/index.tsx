@@ -1,20 +1,15 @@
 import React from 'react';
 import {
-  View, Text, Image, StatusBar
+  View, Text, Image,
 } from 'react-native';
 
 import { ButtonIcon } from '../../components/ButtonIcon';
 import { styles } from './style';
-import { illustrationImg } from '../../assets/illustration.png';
+import illustrationImg from '../../assets/illustration.png';
 
 export function SignIn(){
   return(
     <View style={styles.container}>
-      <StatusBar
-        barStyle="light-content"
-        backgroundColor="transparent"
-        translucent
-      />
         <Image
           source={illustrationImg}
           style={styles.image}
@@ -23,9 +18,9 @@ export function SignIn(){
 
         <View style={styles.content}>
           <Text style={styles.title}>
-            Organize{`\n`}
-            suas jogatinas{`\n`}
-            facilmente{`\n`}
+            Conecte-se{'\n'}
+            e organize suas{'\n'}
+            jogatinas
           </Text>
 
           <Text style={styles.subtitle}>
@@ -33,7 +28,10 @@ export function SignIn(){
             favoritos com seus amigos{`\n`}
           </Text>
 
-          <ButtonIcon />
+          <ButtonIcon
+            title="Entrar com Discord"
+            activeOpacity={0.6}
+          />
         </View>
     </View>
   );
