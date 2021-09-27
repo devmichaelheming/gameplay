@@ -1,14 +1,22 @@
 import React from "react";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createStackNavigator } from "@react-navigation/stack";
 
 import { Home } from '../screens/Home';
-import { SignIn } from '../screens/Signin';
+import { SignIn } from '../screens/SignIn';
+import { theme } from "../global/styles/theme";
 
-const { Navigator, Screen } = createNativeStackNavigator();
+const { Navigator, Screen } = createStackNavigator();
 
 export function AuthRoutes() {
     return (
-        <Navigator>
+        <Navigator
+        headerMode="none"
+        screenOptions={{
+            cardStyle: {
+                backgroundColor: theme.colors.secondary60
+            }
+        }}
+        >
             <Screen
                 name="SignIn"
                 component={SignIn}

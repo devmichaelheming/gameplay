@@ -1,8 +1,8 @@
 import React from "react";
-import {LinearGradient  } from "expo-linear-gradient";
+import { LinearGradient } from "expo-linear-gradient";
 import { Image } from "react-native";
 
-import { styles } from "./style";
+import { styles } from "./styles";
 import { theme } from "../../global/styles/theme";
 
 type Props = {
